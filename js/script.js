@@ -89,7 +89,7 @@
         <p>${escapeHtml(preview)}</p>
         <div class="meta">
           <span>${formatDate(note.updatedAt)}</span>
-          <button class="del-btn" data-id="${note.id}">delete</button>
+          <button class="del-btn" data-id="${note.id}">Delete</button>
         </div>
       `;
       card.addEventListener('click', (e) => {

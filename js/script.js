@@ -9,6 +9,7 @@
   const editorPane = document.getElementById('editorPane');
   const tally = document.getElementById('tally');
   const searchInput = document.getElementById('searchInput');
+  const clearSearchBtn = document.getElementById('clearSearchBtn');
   const newBtn = document.getElementById('newBtn');
 
   // Generates a unique ID for a new note (timestamp + random string).
@@ -219,6 +220,12 @@
   searchInput.addEventListener('input', (e) => {
     searchTerm = e.target.value;
     renderList();
+  });
+  clearSearchBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    searchTerm = '';
+    renderList();
+    searchInput.focus();
   });
 
   // Escapes text before inserting it into innerHTML, so note content can
